@@ -1,16 +1,10 @@
-# implement this file without using these built-in functions: input(), print(), sort(), sorted(), sum()
-#
 # data structure:
 # id: string
 #     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
 # title: string
 # manufacturer: string
 # price: number (dollar)
-#
-# implement these functionalities:
-# * module menu like in main.py
-# * default functionalities: list, add, remove, update
-# * special functionalities
+# in_stock: number
 
 
 from .. import ui
@@ -33,7 +27,7 @@ def show_table(table):
     pass
 
 
-# Ask a new record as an input from the user than add it to @table, than return @list
+# Ask a new record as an input from the user than add it to @table, than return @table
 def add(table):
 
     # your code
@@ -56,6 +50,7 @@ def update(table, id_):
     # your code
 
     return table
+
 
 # special functions:
 # ------------------

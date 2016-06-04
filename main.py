@@ -53,6 +53,7 @@ def main():
             handle_menu()
         except KeyError as err:
             ui.print_error_message(err)
+        # uncomment the next line when you implemented function ui.get_inputs
         # choose()
 
 

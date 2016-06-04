@@ -4,13 +4,8 @@
 # month: number
 # day: number
 # year: number
-# type: string
+# type: string (in = income, out = outcome)
 # amount: number (dollar)
-#
-# implement these functionalities:
-# * module menu like in main.py
-# * default functionalities: list, add, remove, update
-# * special functionalities
 
 
 from .. import ui
@@ -33,7 +28,7 @@ def show_table(table):
     pass
 
 
-# Ask a new record as an input from the user than add it to @table, than return @list
+# Ask a new record as an input from the user than add it to @table, than return @table
 def add(table):
 
     # your code
@@ -50,7 +45,7 @@ def remove(table, id_):
 
 
 # Update the record in @table having the id @id_ by asking the new data from the user,
-# than return @table
+# than return the @table
 def update(table, id_):
 
     # your code

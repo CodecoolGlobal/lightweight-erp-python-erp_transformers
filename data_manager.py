@@ -1,5 +1,6 @@
 # Do not modify this file
 
+
 # read file into a table (list of list of strings)
 def get_table_from_file(file_name):
     with open(file_name, "r") as file:
