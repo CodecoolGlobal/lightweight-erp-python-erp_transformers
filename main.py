@@ -1,15 +1,25 @@
 # Do not modify this file
 
-import os
 import sys
-import ui           # User interface module
-import store        # Store manager
-import hr           # Human manager
-import tool_manager    # Inventory manager
-import accounting   # Accounting manager
-import selling      # Selling manager
-import crm          # Customer Relationship Management (CRM)
-import dss          # Decision Support System (DSS)
+import os
+from importlib.machinery import SourceFileLoader
+main_path = os.path.dirname(os.path.abspath(__file__))
+# User interface module
+ui = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+# Store manager
+store = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+# Human manager
+hr = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+# Inventory manager
+tool_manager = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+# Accounting manager
+accounting = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+# Selling manager
+selling = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+# Customer Relationship Management (CRM)
+crm = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+# Decision Support System (DSS)
+dss = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
 
 
 def choose():

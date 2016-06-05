@@ -6,8 +6,14 @@
 # subscribed: boolean (Is she/he subscribed to the newsletter? 1/0 = yes/not)
 
 
-from .. import ui
-from .. import data_manager
+# importing everything you need
+import os
+from importlib.machinery import SourceFileLoader
+current_file_path = os.path.dirname(os.path.abspath(__file__))
+# User interface module
+ui = SourceFileLoader("module.name", current_file_path + "/../ui.py").load_module()
+# data manager module
+data_manager = SourceFileLoader("module.name", current_file_path + "/../data_manager.py").load_module()
 
 
 # start this manager by a menu
@@ -54,14 +60,14 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-# the question: Wich is the id of the customer with the longest name ?
+# the question: Which is the id of the customer with the longest name?
 # return type: string (id)
-
 def get_longest_name_id(table):
 
     # your code
 
     pass
+
 
 # the question: Which customers has subscribed to the newsletter?
 # return type: list of string (where string is like email+separator+name, separator=";")
