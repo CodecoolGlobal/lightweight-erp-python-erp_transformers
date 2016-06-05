@@ -56,7 +56,7 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-# the question: In which year was the maximum total of amounts? (2015 or 2016)
+# the question: Wich year has the highest profit? (profit=in-out) (2015 or 2016)
 # return the answer (number)
 def which_year_max(table):
 
@@ -65,7 +65,7 @@ def which_year_max(table):
     pass
 
 
-# the question: What is the average amount in a given year?
+# the question: What is the average (per item) profit in a given year? [(profit)/(items count) ]
 # return the answer (number)
 def avg_amount(table, year):
 

@@ -2,6 +2,7 @@
 # id: string
 #     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
 # name: string
+# manufacturer: string
 # purchase_date: number (year)
 # durability: number (year)
 

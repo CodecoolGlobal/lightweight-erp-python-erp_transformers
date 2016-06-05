@@ -5,7 +5,7 @@ import sys
 import ui           # User interface module
 import store        # Store manager
 import hr           # Human manager
-import inventory    # Inventory manager
+import tool_manager    # Inventory manager
 import accounting   # Accounting manager
 import selling      # Selling manager
 import crm          # Customer Relationship Management (CRM)
@@ -20,7 +20,7 @@ def choose():
     elif option == 2:
         hr.start()
     elif option == 3:
-        inventory.start()
+        tool_manager.start()
     elif option == 4:
         accounting.start()
     elif option == 5:

@@ -3,7 +3,7 @@
 #     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
 # name: string
 # email: string
-# subscribed: boolean
+# subscribed: boolean (Is she/he subscribed to the newsletter? 1/0 = yes/not)
 
 
 from .. import ui
@@ -53,3 +53,20 @@ def update(table, id_):
 
 # special functions:
 # ------------------
+
+# the question: Wich is the id of the customer with the longest name ?
+# return type: string (id)
+
+def get_longest_name_id(table):
+
+    # your code
+
+    pass
+
+# the question: Which customers has subscribed to the newsletter?
+# return type: list of string (where string is like email+separator+name, separator=";")
+def get_subscribed_emails(table):
+
+    # your code
+
+    pass
