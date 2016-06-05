@@ -71,9 +71,9 @@ def get_available_tools(table):
 
     pass
 
-	
+
 # the question: What are the average durability time for each manufacturer?
-# returny type: a dictionary with this structure: { [manufacturer] : [avg] }
+# return type: a dictionary with this structure: { [manufacturer] : [avg] }
 def get_average_durability_by_manufacturers(table):
 
     # your code
