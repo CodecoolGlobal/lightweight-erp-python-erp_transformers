@@ -65,6 +65,7 @@ def update(table, id_):
 
 # the question: What is the id of the item that sold for the lowest price ?
 # return type: string (id)
+# if there are more than one with the lowest price, return the first of descending alphabetical order
 def get_lowest_price_item_id(table):
 
     # your code

@@ -4,22 +4,20 @@ import sys
 import os
 from importlib.machinery import SourceFileLoader
 main_path = os.path.dirname(os.path.abspath(__file__))
-# User interface module
+# User Interface module
 ui = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
-# Store manager
+# Store module
 store = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
-# Human manager
+# Human Resources module
 hr = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
-# Inventory manager
+# Tool manager module
 tool_manager = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
-# Accounting manager
+# Accounting module
 accounting = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
-# Selling manager
+# Selling module
 selling = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
-# Customer Relationship Management (CRM)
+# Customer Relationship Management (CRM) module
 crm = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
-# Decision Support System (DSS)
-dss = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
 
 
 def choose():
@@ -37,8 +35,6 @@ def choose():
         selling.start()
     elif option == 6:
         crm.start()
-    elif option == 7:
-        dss.start()
     elif option == 0:
         sys.exit(0)
     else:
@@ -48,11 +44,10 @@ def choose():
 def handle_menu():
     options = ["Store manager",
                "Human resources manager",
-               "Inventory manager",
+               "Tool manager",
                "Accounting manager",
                "Selling manager",
-               "Customer Relationship Management (CRM)",
-               "Decision Support System (DSS)"]
+               "Customer Relationship Management (CRM)"]
 
     ui.print_menu("Main menu", options, "Exit program")
 
