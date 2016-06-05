@@ -54,3 +54,20 @@ def update(table, id_):
 
 # special functions:
 # ------------------
+
+# the question: Which items has not yet exceeded their durability ?
+# return type: list of lists (the inner list contains the whole row with their actual data types)
+def get_available_tools(table):
+
+    # your code
+
+    pass
+
+	
+# the question: What are the average durability time for each manufacturer?
+# returny type: a dictionary with this structure: { [manufacturer] : [avg] }
+def get_average_durability_by_manufacturers(table):
+
+    # your code
+
+    pass

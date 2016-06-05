@@ -2,10 +2,11 @@
 # id: string
 #     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
 # title: string
-# price: number
+# price: number (the actual selling price in $)
 # month: number
 # day: number
 # year: number
+# month,year and day combined gives the date the purchase was made
 
 
 from .. import ui
@@ -55,3 +56,22 @@ def update(table, id_):
 
 # special functions:
 # ------------------
+
+# the question: What is the id of the item that sold for the lowest price ?
+# return type: string (id)
+def get_lowest_price_item_id(table):
+
+    # your code
+
+    pass
+
+	
+# the question: Which items are sold between two given dates ? (from_date < birth_date < to_date)
+# return type: list of lists (the filtered table)
+def get_items_sold_between(table, month_from, day_from, year_from, month_to, day_to, year_to):
+
+    # your code
+
+    pass
+	
+	

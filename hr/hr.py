@@ -2,7 +2,7 @@
 # id: string
 #     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
 # name: string
-# age: number
+# birth_date: number (year)
 
 
 from .. import ui
@@ -52,3 +52,20 @@ def update(table, id_):
 
 # special functions:
 # ------------------
+
+# the question: Who is the oldest person ?
+# return type: list of strings (name or names if there are two more with the same value)
+def get_oldest_person(table):
+
+    # your code
+
+    pass
+	
+	
+# the question: Who is the closest to the average age ?
+# return type: list of strings (name or names if there are two more with the same value)
+def get_persons_closest_to_average(table):
+
+    # your code
+
+    pass

@@ -54,15 +54,15 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-# the question: Wich is the id of the customer with the longest name ?
+# the question: What is the id of the customer with the longest name ?
 # return type: string (id)
-
 def get_longest_name_id(table):
 
     # your code
 
     pass
 
+	
 # the question: Which customers has subscribed to the newsletter?
 # return type: list of string (where string is like email+separator+name, separator=";")
 def get_subscribed_emails(table):
