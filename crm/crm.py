@@ -60,7 +60,8 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-# the question: Which is the id of the customer with the longest name?
+
+# the question: What is the id of the customer with the longest name ?
 # return type: string (id)
 def get_longest_name_id(table):
 
