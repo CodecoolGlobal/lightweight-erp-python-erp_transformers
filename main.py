@@ -2,22 +2,21 @@
 
 import sys
 import os
+import ui  # User Interface
 from importlib.machinery import SourceFileLoader
 main_path = os.path.dirname(os.path.abspath(__file__))
-# User Interface module
-ui = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
 # Store module
-store = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+store = SourceFileLoader("module.name", main_path + "/store/store.py").load_module()
 # Human Resources module
-hr = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+hr = SourceFileLoader("module.name", main_path + "/hr/hr.py").load_module()
 # Tool manager module
-tool_manager = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+tool_manager = SourceFileLoader("module.name", main_path + "/tool_manager/tool_manager.py").load_module()
 # Accounting module
 accounting = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
 # Selling module
-selling = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+selling = SourceFileLoader("module.name", main_path + "/selling/selling.py").load_module()
 # Customer Relationship Management (CRM) module
-crm = SourceFileLoader("module.name", main_path + "/accounting/accounting.py").load_module()
+crm = SourceFileLoader("module.name", main_path + "/crm/crm.py").load_module()
 
 
 def choose():
@@ -58,8 +57,7 @@ def main():
             handle_menu()
         except KeyError as err:
             ui.print_error_message(err)
-        # uncomment the next line when you implemented function ui.get_inputs
-        # choose()
+        choose()
 
 
 if __name__ == '__main__':
