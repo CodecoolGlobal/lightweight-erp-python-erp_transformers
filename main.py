@@ -53,11 +53,11 @@ def handle_menu():
 
 def main():
     while True:
+        handle_menu()
         try:
-            handle_menu()
+            choose()
         except KeyError as err:
             ui.print_error_message(err)
-        choose()
 
 
 if __name__ == '__main__':
