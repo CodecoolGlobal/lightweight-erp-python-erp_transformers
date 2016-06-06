@@ -20,7 +20,7 @@ common = SourceFileLoader("module.name", current_file_path + "/../common.py").lo
 
 
 # start this manager by a menu
-def start():
+def start_module():
 
     # you code
 
