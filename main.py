@@ -58,6 +58,8 @@ def main():
             choose()
         except KeyError as err:
             ui.print_error_message(err)
+        except ValueError as err:
+            ui.print_error_message(err)
 
 
 if __name__ == '__main__':
