@@ -64,7 +64,7 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-# the question: Which year has the highest profit? (profit=in-out) (2015 or 2016)
+# the question: Which year has the highest profit? (profit=in-out)
 # return the answer (number)
 def which_year_max(table):
 
