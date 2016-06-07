@@ -103,6 +103,12 @@ class AccountingTester(unittest.TestCase):
     def test_forbidden_functions(self):
         check_forbidden_functions(self, "accounting/accounting.py")
 
+    def test_check_burnin_dates(self):
+        with open("accounting/accounting.py", "r") as file:
+            lines = file.read()
+            self.assertEqual(lines.find("2015"), -1)
+            self.assertEqual(lines.find("2016"), -1)
+
     def test_which_year_max(self):
         table = data_manager.get_table_from_file(self.data_file)
         result = accounting.which_year_max(table)
