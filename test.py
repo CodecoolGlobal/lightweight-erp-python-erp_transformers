@@ -3,12 +3,12 @@ import os
 import data_manager
 from importlib.machinery import SourceFileLoader
 current_file_path = os.path.dirname(os.path.abspath(__file__))
-store = SourceFileLoader("module.name", current_file_path + "/store/store.py").load_module()
-hr = SourceFileLoader("module.name", current_file_path + "/hr/hr.py").load_module()
-tool_manager = SourceFileLoader("module.name", current_file_path + "/tool_manager/tool_manager.py").load_module()
-accounting = SourceFileLoader("module.name", current_file_path + "/accounting/accounting.py").load_module()
-selling = SourceFileLoader("module.name", current_file_path + "/selling/selling.py").load_module()
-crm = SourceFileLoader("module.name", current_file_path + "/crm/crm.py").load_module()
+store = SourceFileLoader("store", current_file_path + "/store/store.py").load_module()
+hr = SourceFileLoader("hr", current_file_path + "/hr/hr.py").load_module()
+tool_manager = SourceFileLoader("tool_manager", current_file_path + "/tool_manager/tool_manager.py").load_module()
+accounting = SourceFileLoader("accounting", current_file_path + "/accounting/accounting.py").load_module()
+selling = SourceFileLoader("selling", current_file_path + "/selling/selling.py").load_module()
+crm = SourceFileLoader("crm", current_file_path + "/crm/crm.py").load_module()
 
 
 def compare_lists(tester, expected_list, result_list):
