@@ -14,4 +14,4 @@ def write_table_to_file(file_name, table):
     with open(file_name, "w") as file:
         for record in table:
             row = ';'.join(record)
-            file.write(row+"\n")
+            file.write(row + "\n")
