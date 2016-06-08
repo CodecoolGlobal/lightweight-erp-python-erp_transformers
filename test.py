@@ -116,7 +116,7 @@ class AccountingTester(unittest.TestCase):
 
     def test_avg_amount(self):
         table = data_manager.get_table_from_file(self.data_file)
-        result = accounting.avg_amount(table, 2015)
+        result = accounting.avg_amount(table, 2016)
         self.assertEqual(result, 48.125)
 
 
