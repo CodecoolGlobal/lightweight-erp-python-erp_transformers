@@ -20,7 +20,10 @@ data_manager = SourceFileLoader("data_manager", current_file_path + "/../data_ma
 common = SourceFileLoader("common", current_file_path + "/../common.py").load_module()
 
 
-# start this manager by a menu
+# start this module by a module menu like the main menu
+# user need to go back to the main menu from here
+# we need to reach the default and the special functions of this module from the module menu
+#
 def start_module():
 
     # you code
@@ -29,6 +32,8 @@ def start_module():
 
 
 # print the default table of records from the file
+#
+# @table: list of lists
 def show_table(table):
 
     # your code
@@ -37,6 +42,8 @@ def show_table(table):
 
 
 # Ask a new record as an input from the user than add it to @table, than return @table
+#
+# @table: list of lists
 def add(table):
 
     # your code
@@ -45,6 +52,9 @@ def add(table):
 
 
 # Remove the record having the id @id_ from the @list, than return @table
+#
+# @table: list of lists
+# @id_: string
 def remove(table, id_):
 
     # your code
@@ -53,7 +63,10 @@ def remove(table, id_):
 
 
 # Update the record in @table having the id @id_ by asking the new data from the user,
-# than return the @table
+# than return @table
+#
+# @table: list of lists
+# @id_: string
 def update(table, id_):
 
     # your code

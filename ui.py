@@ -1,6 +1,6 @@
 
 
-# An example output:
+# This function needs to print outputs like this:
 # /-----------------------------------\
 # |   id   |      title     |  type   |
 # |--------|----------------|---------|
@@ -8,6 +8,9 @@
 # |--------|----------------|---------|
 # |   1    |       fo       |    fps  |
 # \-----------------------------------/
+#
+# @table: list of lists - the table to print out
+# @title_list: list of strings - the head of the table
 def print_table(table, title_list):
 
     # your code
@@ -15,7 +18,18 @@ def print_table(table, title_list):
     pass
 
 
-# An example output:
+# This function needs to print result of the special functions
+#
+# @result: string or list or dictionary - result of the special function
+# @label: string - label of the result
+def print_result(result, label):
+
+    # your code
+
+    pass
+
+
+# This function needs to generate outputs like this:
 # Main menu:
 # (1) Store manager
 # (2) Human resources manager
@@ -25,7 +39,9 @@ def print_table(table, title_list):
 # (6) Customer relationship management (CRM)
 # (0) Exit program
 #
-# see the function call in main.py
+# @title: string - title of the menu
+# @list_options: list of strings - the options in the menu
+# @exit_message: string - the last option with (0) (example: "Back to main menu")
 def print_menu(title, list_options, exit_message):
 
     # your code
@@ -33,16 +49,22 @@ def print_menu(title, list_options, exit_message):
     pass
 
 
-# see the function call in main.py
-def get_inputs(list_titles, title):
-    record = []
+# This function gets a list of inputs from the user by the terminal
+#
+# @list_labels: list of strings - the labels of the inputs
+# @title: string - title of the "input section"
+# @inputs: list of string - list of the received values from the user
+def get_inputs(list_labels, title):
+    inputs = []
 
     # your code
 
-    return record
+    return inputs
 
 
-# see the function call in main.py
+# This function needs to print an error message. (example: Error: @message)
+#
+# @message: string - the error message
 def print_error_message(message):
 
     # your code

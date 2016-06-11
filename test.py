@@ -1,3 +1,5 @@
+# Do not modify this file (if you want to modify anyway, contact a mentor before, who will explain why do not modify)
+
 import unittest
 import os
 import data_manager
@@ -144,6 +146,11 @@ class HRTester(unittest.TestCase):
     def test_forbidden_functions(self):
         check_forbidden_functions(self, "hr/hr.py")
 
+    def test_check_using_datetime(self):
+        with open("hr/hr.py", "r") as file:
+            lines = file.read()
+            self.assertEqual(lines.find("datetime"), -1)
+
     def test_get_oldest_person(self):
         table = data_manager.get_table_from_file(self.data_file)
         expected = ["Barbara Streisand", "Joey Tribbiani", "Evelin Smile"]
@@ -162,6 +169,11 @@ class SellingTester(unittest.TestCase):
 
     def test_forbidden_functions(self):
         check_forbidden_functions(self, "selling/selling.py")
+
+    def test_check_using_datetime(self):
+        with open("selling/selling.py", "r") as file:
+            lines = file.read()
+            self.assertEqual(lines.find("datetime"), -1)
 
     def test_get_lowest_price_item_id(self):
         table = data_manager.get_table_from_file(self.data_file)

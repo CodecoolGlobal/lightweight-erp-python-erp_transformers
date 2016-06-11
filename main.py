@@ -1,4 +1,6 @@
 # Do not modify this file
+# run the program (the ERP software) by this file from the terminal from thd root directory of this project
+
 
 import sys
 import os

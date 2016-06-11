@@ -1,7 +1,10 @@
 # Do not modify this file
 
 
-# read file into a table (list of list of strings)
+# read file into a @table
+#
+# @file_name: string
+# @table: list of lists of strings
 def get_table_from_file(file_name):
     with open(file_name, "r") as file:
         lines = file.readlines()
@@ -9,7 +12,10 @@ def get_table_from_file(file_name):
     return table
 
 
-# write a table (list of list of strings) into a file
+# write a @table into a file
+#
+# @file_name: string
+# @table: list of lists of strings
 def write_table_to_file(file_name, table):
     with open(file_name, "w") as file:
         for record in table:
