@@ -35,9 +35,9 @@ def get_subscribed_list():
 
 def get_item_sold_between_dates():
     return [["eH34Ju#&", "Astebreed", 25, 3, 10, 2016],
-            ["bH34Ju#&" "Age of Wonders II: The Wizard's Throne", 20, 4, 1, 2016],
-            ["vH34Ju#&" "AudioSurf", 23, 6, 2, 2016],
-            ["kH35Ju#&" "Age of Empires", 11, 3, 7, 2016]]
+            ["bH34Ju#&", "Age of Wonders II: The Wizard's Throne", 20, 4, 1, 2016],
+            ["vH34Ju#&", "AudioSurf", 23, 6, 2, 2016],
+            ["kH35Ju#&", "Age of Empires", 11, 3, 7, 2016]]
 
 
 def get_count_by_manufacturer_list():
