@@ -164,7 +164,7 @@ class HRTester(unittest.TestCase):
         compare_lists(self, expected, result)
 
 
-class SellingTester(unittest.TestCase):
+class SalesTester(unittest.TestCase):
     data_file = "sales/sales_test.csv"
 
     def test_forbidden_functions(self):
@@ -205,7 +205,7 @@ class StoreTester(unittest.TestCase):
         self.assertEqual(result, 12.25)
 
 
-class ToolManagerTester(unittest.TestCase):
+class InventoryTester(unittest.TestCase):
     data_file = "inventory/inventory_test.csv"
 
     def test_forbidden_functions(self):
