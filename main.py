@@ -6,19 +6,18 @@ import sys
 import os
 import ui  # User Interface
 from importlib.machinery import SourceFileLoader
-main_path = os.path.dirname(os.path.abspath(__file__))
 # Store module
-store = SourceFileLoader("store", main_path + "/store/store.py").load_module()
+import store.store
 # Human Resources module
-hr = SourceFileLoader("hr", main_path + "/hr/hr.py").load_module()
+import hr.hr
 # Tool manager module
-tool_manager = SourceFileLoader("tool_manager", main_path + "/tool_manager/tool_manager.py").load_module()
+import tool_manager.tool_manager
 # Accounting module
-accounting = SourceFileLoader("accounting", main_path + "/accounting/accounting.py").load_module()
-# Selling module
-selling = SourceFileLoader("selling", main_path + "/selling/selling.py").load_module()
+import accounting.accounting
+# Sales module
+import selling.selling
 # Customer Relationship Management (CRM) module
-crm = SourceFileLoader("crm", main_path + "/crm/crm.py").load_module()
+import crm.crm
 
 
 def choose():
