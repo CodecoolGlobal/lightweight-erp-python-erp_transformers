@@ -1,9 +1,10 @@
 # data structure:
 # id: string
-#     Unique and randomly generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
+#     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
 # name: string
-# email: string
-# subscribed: boolean (Is she/he subscribed to the newsletter? 1/0 = yes/not)
+# manufacturer: string
+# purchase_date: number (year)
+# durability: number (year)
 
 
 # importing everything you need
@@ -26,7 +27,7 @@ def start_module():
         None
     """
 
-    # your code
+    # you code
 
     pass
 
@@ -100,19 +101,22 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-
-# the question: What is the id of the customer with the longest name ?
-# return type: string (id) - if there are more than one longest name, return the first by descending alphabetical order
-def get_longest_name_id(table):
+# the question: Which items have not exceeded their durability yet?
+# return type: list of lists (the inner list contains the whole row with their actual data types)
+#
+# @table: list of lists
+def get_available_items(table):
 
     # your code
 
     pass
 
 
-# the question: Which customers has subscribed to the newsletter?
-# return type: list of strings (where string is like email+separator+name, separator=";")
-def get_subscribed_emails(table):
+# the question: What are the average durability times for each manufacturer?
+# return type: a dictionary with this structure: { [manufacturer] : [avg] }
+#
+# @table: list of lists
+def get_average_durability_by_manufacturers(table):
 
     # your code
 

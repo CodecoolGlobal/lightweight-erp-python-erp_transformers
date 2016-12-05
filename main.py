@@ -1,5 +1,5 @@
 # Do not modify this file
-# run the program (the ERP software) by this file from the terminal from thd root directory of this project
+# run this program (the ERP software) from the terminal from thd root directory of this project
 
 
 import sys
@@ -7,17 +7,17 @@ import os
 import ui  # User Interface
 from importlib.machinery import SourceFileLoader
 # Store module
-import store.store
+from store import store
 # Human Resources module
-import hr.hr
+from hr import hr
 # Tool manager module
-import tool_manager.tool_manager
+from inventory import inventory
 # Accounting module
-import accounting.accounting
+from accounting import accounting
 # Sales module
-import selling.selling
+from sales import sales
 # Customer Relationship Management (CRM) module
-import crm.crm
+from crm import crm
 
 
 def choose():
@@ -28,11 +28,11 @@ def choose():
     elif option == "2":
         hr.start_module()
     elif option == "3":
-        tool_manager.start_module()
+        inventory.start_module()
     elif option == "4":
         accounting.start_module()
     elif option == "5":
-        selling.start_module()
+        sales.start_module()
     elif option == "6":
         crm.start_module()
     elif option == "0":
@@ -53,6 +53,7 @@ def handle_menu():
 
 
 def main():
+    accounting.start_module()
     while True:
         handle_menu()
         try:

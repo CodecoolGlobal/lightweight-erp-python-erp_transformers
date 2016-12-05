@@ -7,9 +7,9 @@ from importlib.machinery import SourceFileLoader
 current_file_path = os.path.dirname(os.path.abspath(__file__))
 store = SourceFileLoader("store", current_file_path + "/store/store.py").load_module()
 hr = SourceFileLoader("hr", current_file_path + "/hr/hr.py").load_module()
-tool_manager = SourceFileLoader("tool_manager", current_file_path + "/tool_manager/tool_manager.py").load_module()
+tool_manager = SourceFileLoader("inventory", current_file_path + "/inventory/inventory.py").load_module()
 accounting = SourceFileLoader("accounting", current_file_path + "/accounting/accounting.py").load_module()
-selling = SourceFileLoader("selling", current_file_path + "/selling/selling.py").load_module()
+selling = SourceFileLoader("sales", current_file_path + "/sales/sales.py").load_module()
 crm = SourceFileLoader("crm", current_file_path + "/crm/crm.py").load_module()
 
 
@@ -165,13 +165,13 @@ class HRTester(unittest.TestCase):
 
 
 class SellingTester(unittest.TestCase):
-    data_file = "selling/sellings_test.csv"
+    data_file = "sales/sales_test.csv"
 
     def test_forbidden_functions(self):
-        check_forbidden_functions(self, "selling/selling.py")
+        check_forbidden_functions(self, "sales/sales.py")
 
     def test_check_using_datetime(self):
-        with open("selling/selling.py", "r") as file:
+        with open("sales/sales.py", "r") as file:
             lines = file.read()
             self.assertEqual(lines.find("datetime"), -1)
 
@@ -206,10 +206,10 @@ class StoreTester(unittest.TestCase):
 
 
 class ToolManagerTester(unittest.TestCase):
-    data_file = "tool_manager/tools_test.csv"
+    data_file = "inventory/inventory_test.csv"
 
     def test_forbidden_functions(self):
-        check_forbidden_functions(self, "tool_manager/tool_manager.py")
+        check_forbidden_functions(self, "inventory/inventory.py")
 
     def test_get_available_tools(self):
         table = data_manager.get_table_from_file(self.data_file)

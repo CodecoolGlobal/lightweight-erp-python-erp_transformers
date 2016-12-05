@@ -1,10 +1,12 @@
 # data structure:
 # id: string
-#     Unique and randomly generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
-# name: string
-# email: string
-# subscribed: boolean (Is she/he subscribed to the newsletter? 1/0 = yes/not)
-
+#     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
+# title: string
+# price: number (the actual sale price in $)
+# month: number
+# day: number
+# year: number
+# month,year and day combined gives the date the sale was made
 
 # importing everything you need
 import os
@@ -100,19 +102,19 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-
-# the question: What is the id of the customer with the longest name ?
-# return type: string (id) - if there are more than one longest name, return the first by descending alphabetical order
-def get_longest_name_id(table):
+# the question: What is the id of the item that was sold for the lowest price ?
+# return type: string (id)
+# if there are more than one with the lowest price, return the first by descending alphabetical order
+def get_lowest_price_item_id(table):
 
     # your code
 
     pass
 
 
-# the question: Which customers has subscribed to the newsletter?
-# return type: list of strings (where string is like email+separator+name, separator=";")
-def get_subscribed_emails(table):
+# the question: Which items are sold between two given dates ? (from_date < sale_date < to_date)
+# return type: list of lists (the filtered table)
+def get_items_sold_between(table, month_from, day_from, year_from, month_to, day_to, year_to):
 
     # your code
 
