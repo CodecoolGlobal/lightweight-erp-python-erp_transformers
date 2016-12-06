@@ -44,16 +44,15 @@ def choose():
 def handle_menu():
     options = ["Store manager",
                "Human resources manager",
-               "Tool manager",
+               "Inventory manager",
                "Accounting manager",
-               "Selling manager",
+               "Sales manager",
                "Customer Relationship Management (CRM)"]
 
     ui.print_menu("Main menu", options, "Exit program")
 
 
 def main():
-    accounting.start_module()
     while True:
         handle_menu()
         try:
