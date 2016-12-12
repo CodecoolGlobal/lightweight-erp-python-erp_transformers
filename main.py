@@ -5,7 +5,6 @@
 import sys
 import os
 import ui  # User Interface
-from importlib.machinery import SourceFileLoader
 # Store module
 from store import store
 # Human Resources module

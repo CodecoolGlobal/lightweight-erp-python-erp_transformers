@@ -3,14 +3,18 @@
 import unittest
 import os
 import data_manager
-from importlib.machinery import SourceFileLoader
-current_file_path = os.path.dirname(os.path.abspath(__file__))
-store = SourceFileLoader("store", current_file_path + "/store/store.py").load_module()
-hr = SourceFileLoader("hr", current_file_path + "/hr/hr.py").load_module()
-tool_manager = SourceFileLoader("inventory", current_file_path + "/inventory/inventory.py").load_module()
-accounting = SourceFileLoader("accounting", current_file_path + "/accounting/accounting.py").load_module()
-selling = SourceFileLoader("sales", current_file_path + "/sales/sales.py").load_module()
-crm = SourceFileLoader("crm", current_file_path + "/crm/crm.py").load_module()
+# Store module
+from store import store
+# Human Resources module
+from hr import hr
+# Tool manager module
+from inventory import inventory
+# Accounting module
+from accounting import accounting
+# Sales module
+from sales import sales
+# Customer Relationship Management (CRM) module
+from crm import crm
 
 
 def compare_lists(tester, expected_list, result_list):
@@ -177,13 +181,13 @@ class SalesTester(unittest.TestCase):
 
     def test_get_lowest_price_item_id(self):
         table = data_manager.get_table_from_file(self.data_file)
-        result = selling.get_lowest_price_item_id(table)
+        result = sales.get_lowest_price_item_id(table)
         self.assertEqual(result, "kH35Ju#&")
 
     def test_get_items_sold_between(self):
         table = data_manager.get_table_from_file(self.data_file)
         expected = get_item_sold_between_dates()
-        result = selling.get_items_sold_between(table, 2, 12, 2016, 7, 6, 2016)
+        result = sales.get_items_sold_between(table, 2, 12, 2016, 7, 6, 2016)
         compare_lists(self, expected, result)
 
 
@@ -211,16 +215,16 @@ class InventoryTester(unittest.TestCase):
     def test_forbidden_functions(self):
         check_forbidden_functions(self, "inventory/inventory.py")
 
-    def test_get_available_tools(self):
+    def test_get_available_items(self):
         table = data_manager.get_table_from_file(self.data_file)
         expected = [["kH34Ju#&", "PlayStation 4", "Sony", 2013, 4], ["jH34Ju#&", "Xbox One", "Microsoft", 2013, 4]]
-        result = tool_manager.get_available_tools(table)
+        result = inventory.get_available_items(table)
         compare_lists(self, expected, result)
 
     def test_get_average_durability_by_manufacturers(self):
         table = data_manager.get_table_from_file(self.data_file)
         expected = {"Sony": 3.5, "Microsoft": 4, "Nintendo": 3.25}
-        result = tool_manager.get_average_durability_by_manufacturers(table)
+        result = inventory.get_average_durability_by_manufacturers(table)
         self.assertEqual(result, expected)
 
 
