@@ -124,6 +124,24 @@ def get_items_sold_between(table, month_from, day_from, year_from, month_to, day
 # ----------------------------
 
 
+def get_title_by_id_(id):
+
+    """
+    Reads the table with the help of the data_manager module.
+    Returns the title (str) of the customer with the given id (str) on None om case of non-existing id.
+
+    Args:
+        id (str): the id of the customer
+
+    Returns:
+        str the title of the customer
+    """
+
+    # your code
+
+    pass
+
+
 def get_title_by_id(table, id):
 
     """
@@ -158,6 +176,20 @@ def display_the_item_title_sold_last(table):
     pass
 
 
+def get_item_id_sold_last_():
+    """
+    Reads the table with the help of the data_manager module.
+    Returns the _id_ of the item that was sold most recently.
+
+    Returns:
+        (str) the _id_ of the item that was sold most recently.
+    """
+
+    # your code
+
+    pass
+
+
 def get_item_id_sold_last(table):
     """
     Returns the _id_ of the item that was sold most recently.
@@ -184,6 +216,23 @@ def display_the_sum_of_prices(table):
 
     Returns:
         None
+    """
+
+    # your code
+
+    pass
+
+
+def get_the_sum_of_prices_(item_ids):
+    """
+    Reads the table of sales with the help of the data_manager module.
+    Returns the sum of the prices of the items in the item_ids.
+
+    Args:
+        item_ids (list of str): the ids
+
+    Returns:
+        (number) the sum of the items' prices
     """
 
     # your code

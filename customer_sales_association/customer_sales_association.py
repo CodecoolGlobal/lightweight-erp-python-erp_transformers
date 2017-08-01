@@ -80,6 +80,21 @@ def remove(table, sale_id):
 # functions supports statistic
 # ----------------------------
 
+
+def get_all_customer_ids_():
+    """
+    Reads the customer-sales association table with the help of the data_manager module.
+    Returns a set of customer_ids that are present in the table.
+
+    Returns:
+         set of customer_ids that are present in the table
+    """
+
+    # your code
+
+    pass
+
+
 def get_all_customer_ids(table):
     """
     Returns a set of customer_ids that are present in the table.
@@ -89,6 +104,24 @@ def get_all_customer_ids(table):
 
     Returns:
          set of customer_ids that are present in the table
+    """
+
+    # your code
+
+    pass
+
+
+def get_all_sales_ids_for_customer_ids_():
+    """
+    Reads the customer-sales association table with the help of the data_manager module.
+    Returns a set of (customer_id, sale_ids) tuples where:
+        customer_id:
+        sale_ids (list): all the sales belong to the given customer
+    (one customer id belongs to only one tuple)
+
+    Returns:
+         (set of tuples (customer_id, (list) sale_ids)) where the sale_ids list in a tuple contains
+         all the sales id belong to the given customer_id
     """
 
     # your code
@@ -109,6 +142,22 @@ def get_all_sales_ids_for_customer_ids(table):
     Returns:
          (set of tuples (customer_id, (list) sale_ids)) where the sale_ids list in a tuple contains
          all the sales id belong to the given customer_id
+    """
+
+    # your code
+
+    pass
+
+
+def get_num_of_sales_per_customer_ids_():
+    """
+     Reads the customer-sales association table with the help of the data_manager module.
+     Returns a set of (customer_id, num_of_sales) tuples where:
+        customer_id:
+        num_of_sales (number): number of sales the customer made
+
+     Returns:
+         set of tuples (customer_id (str), num_of_sales (number))
     """
 
     # your code
