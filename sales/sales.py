@@ -181,10 +181,9 @@ def display_the_sum_of_prices(table):
 
     Args:
         table (list of lists): the sales table
-        item_ids (list of str): the ids
 
     Returns:
-        (number) the sum of the items' prices
+        None
     """
 
     # your code
