@@ -227,6 +227,9 @@ class InventoryTester(unittest.TestCase):
         result = inventory.get_average_durability_by_manufacturers(table)
         self.assertEqual(result, expected)
 
+class DataAnalyserTester(unittest.TestCase):
+    def test_forbidden_functions(self):
+        check_forbidden_functions(self, "data_analyser/data_analyser.py")
 
 def main():
     unittest.main()
