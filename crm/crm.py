@@ -123,33 +123,14 @@ def get_subscribed_emails(table):
 # ----------------------------
 
 
-def get_name_by_id(id_):
+def get_name_by_id(table, id):
 
     """
-    Reads the table with the help of the data_manager module.
-    Returns the name (str) of the customer with the given id_ (str) on None om case of non-existing id.
+    Returns the name (str) of the customer with the given id (str) on None om case of non-existing id.
 
     Args:
         table (list of lists): the customer table
-        id_ (str): the id of the customer
-
-    Returns:
-        str the name of the customer
-    """
-
-    # your code
-
-    pass
-
-
-def get_name_by_id(table, id_):
-
-    """
-    Returns the name (str) of the customer with the given id_ (str) on None om case of non-existing id.
-
-    Args:
-        table (list of lists): the customer table
-        id_ (str): the id of the customer
+        id (str): the id of the customer
 
     Returns:
         str the name of the customer
