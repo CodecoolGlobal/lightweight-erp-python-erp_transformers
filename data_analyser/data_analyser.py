@@ -30,19 +30,6 @@ def start_module():
     pass
 
 
-def display_the_last_buyer():
-    """
-    Displays (prints) the _name_ of the customer made sale last.
-
-    Returns:
-        None
-    """
-
-    # your code
-
-    pass
-
-
 def get_the_last_buyer_id():
     """
     Returns the customer id of the customer made sale last.
@@ -56,18 +43,6 @@ def get_the_last_buyer_id():
     pass
 
 
-def display_the_buyer_spent_most_and_the_money_spent():
-    """
-    Displays the _name_ of the customer who spent more in sum and the money (s)he spent.
-
-    Returns:
-        None
-    """
-    # your code
-
-    pass
-
-
 def get_the_buyer_id_spent_most_and_the_money_spent():
     """
     Returns the customer who spent more in sum and the money (s)he spent.
@@ -76,20 +51,6 @@ def get_the_buyer_id_spent_most_and_the_money_spent():
 
    Returns:
         Tuple of customer id and the sum the customer spent
-    """
-
-    # your code
-
-    pass
-
-
-def display_the_most_frequent_buyers_and_their_num_of_sales():
-    """
-    Gets an input from the user, how many customers they want to see.
-    Displays a table with the name of the customers and the number of sales they made.
-
-    Returns:
-        None
     """
 
     # your code
