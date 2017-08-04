@@ -120,7 +120,7 @@ def get_all_sales_ids_for_customer_ids_():
     (one customer id belongs to only one tuple)
 
     Returns:
-         (set of tuples (customer_id, (list) sale_ids)) where the sale_ids list in a tuple contains
+         (dict of (key, value): (customer_id, (list) sale_ids)) where the sale_ids list contains
          all the sales id belong to the given customer_id
     """
 
@@ -140,7 +140,7 @@ def get_all_sales_ids_for_customer_ids(table):
         table (list of list): association table between sales and customers
 
     Returns:
-         (set of tuples (customer_id, (list) sale_ids)) where the sale_ids list in a tuple contains
+         (dict of (key, value): (customer_id, (list) sale_ids)) where the sale_ids list contains
          all the sales id belong to the given customer_id
     """
 
@@ -157,7 +157,7 @@ def get_num_of_sales_per_customer_ids_():
         num_of_sales (number): number of sales the customer made
 
      Returns:
-         set of tuples (customer_id (str), num_of_sales (number))
+         dict of (key, value): (customer_id (str), num_of_sales (number))
     """
 
     # your code
@@ -175,7 +175,7 @@ def get_num_of_sales_per_customer_ids(table):
         table (list of list): association table between sales and customers
 
      Returns:
-         set of tuples (customer_id (str), num_of_sales (number))
+         dict of (key, value): (customer_id (str), num_of_sales (number))
     """
 
     # your code
