@@ -80,6 +80,41 @@ def remove(table, sale_id):
 # functions supports statistic
 # ----------------------------
 
+def get_customer_id_by_sale_id_(sale_id):
+    """
+    Reads the customer-sales association table with the help of the data_manager module.
+    Returns the customer_id that belongs to the given sale_id 
+    or None if no such sale_id is in the table.
+
+    Args:
+         sale_id (str): sale id to search for
+
+    Returns:
+         customer_id that belongs to the given sale id
+    """
+
+    # your code
+
+    pass
+
+
+def get_customer_id_by_sale_id(table, sale_id):
+    """
+    Returns the customer_id that belongs to the given sale_id 
+    or None if no such sale_id is in the table.
+
+    Args:
+        table: table to remove a record from
+        sale_id (str): sale id to search for
+
+    Returns:
+         customer_id that belongs to the given sale id
+    """
+
+    # your code
+
+    pass
+
 
 def get_all_customer_ids_():
     """
