@@ -190,6 +190,22 @@ def get_item_id_sold_last(table):
     pass
 
 
+def get_item_title_sold_last(table):
+    """
+    Returns the _title_ of the item that was sold most recently.
+
+    Args:
+        table (list of lists): the sales table
+
+    Returns:
+        (str) the _title_ of the item that was sold most recently.
+    """
+
+    # your code
+
+    pass
+
+
 def get_the_sum_of_prices_(item_ids):
     """
     Reads the table of sales with the help of the data_manager module.
