@@ -120,8 +120,8 @@ def get_items_sold_between(table, month_from, day_from, year_from, month_to, day
 
     pass
 
-# functions supports statistic
-# ----------------------------
+# functions supports data abalyser
+# --------------------------------
 
 
 def get_title_by_id_(id):

@@ -119,8 +119,8 @@ def get_subscribed_emails(table):
     pass
 
 
-# functions supports statistic
-# ----------------------------
+# functions supports data analyser
+# --------------------------------
 
 
 def get_name_by_id_(id):
