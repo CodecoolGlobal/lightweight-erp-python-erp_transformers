@@ -239,3 +239,128 @@ def get_the_sum_of_prices_from_table(table, item_ids):
     # your code
 
     pass
+
+
+def get_customer_id_by_sale_id(sale_id):
+    """
+    Reads the sales table with the help of the data_manager module.
+    Returns the customer_id that belongs to the given sale_id
+    or None if no such sale_id is in the table.
+    Args:
+         sale_id (str): sale id to search for
+    Returns:
+         customer_id that belongs to the given sale id
+    """
+
+    # your code
+
+    pass
+
+
+def get_customer_id_by_sale_id_from_table(table, sale_id):
+    """
+    Returns the customer_id that belongs to the given sale_id
+    or None if no such sale_id is in the table.
+    Args:
+        table: table to remove a record from
+        sale_id (str): sale id to search for
+    Returns:
+         customer_id that belongs to the given sale id
+    """
+
+    # your code
+
+    pass
+
+
+def get_all_customer_ids():
+    """
+    Reads the sales table with the help of the data_manager module.
+    Returns a set of customer_ids that are present in the table.
+    Returns:
+         set of customer_ids that are present in the table
+    """
+
+    # your code
+
+    pass
+
+
+def get_all_customer_ids_from_table(table):
+    """
+    Returns a set of customer_ids that are present in the table.
+    Args:
+        table (list of list): association table between sales and customers
+    Returns:
+         set of customer_ids that are present in the table
+    """
+
+    # your code
+
+    pass
+
+
+def get_all_sales_ids_for_customer_ids():
+    """
+    Reads the customer-sales association table with the help of the data_manager module.
+    Returns a set of (customer_id, sale_ids) tuples where:
+        customer_id:
+        sale_ids (list): all the sales belong to the given customer
+    (one customer id belongs to only one tuple)
+    Returns:
+         (dict of (key, value): (customer_id, (list) sale_ids)) where the sale_ids list contains
+         all the sales id belong to the given customer_id
+    """
+
+    # your code
+
+    pass
+
+
+def get_all_sales_ids_for_customer_ids_form_table(table):
+    """
+    Returns a set of (customer_id, sale_ids) tuples where:
+        customer_id:
+        sale_ids (list): all the sales belong to the given customer
+    (one customer id belongs to only one tuple)
+    Args:
+        table (list of list): association table between sales and customers
+    Returns:
+         (dict of (key, value): (customer_id, (list) sale_ids)) where the sale_ids list contains
+         all the sales id belong to the given customer_id
+    """
+
+    # your code
+
+    pass
+
+
+def get_num_of_sales_per_customer_ids():
+    """
+     Reads the customer-sales association table with the help of the data_manager module.
+     Returns a set of (customer_id, num_of_sales) tuples where:
+        customer_id:
+        num_of_sales (number): number of sales the customer made
+     Returns:
+         dict of (key, value): (customer_id (str), num_of_sales (number))
+    """
+
+    # your code
+
+    pass
+
+
+def get_num_of_sales_per_customer_ids_from_table(table):
+    """
+     Returns a set of (customer_id, num_of_sales) tuples where:
+        customer_id:
+        num_of_sales (number): number of sales the customer made
+     Args:
+        table (list of list): association table between sales and customers
+     Returns:
+         dict of (key, value): (customer_id (str), num_of_sales (number))
+    """
+
+    # your code
+
+    pass
