@@ -12,7 +12,6 @@ import ui
 import common
 from sales import sales
 from crm import crm
-from customer_sales_association import customer_sales_association
 
 
 def start_module():

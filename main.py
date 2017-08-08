@@ -19,8 +19,6 @@ from sales import sales
 from crm import crm
 # Data Analyser module
 from data_analyser import data_analyser
-# Customer-Sales Association module
-from customer_sales_association import customer_sales_association
 
 
 def choose():
@@ -40,8 +38,6 @@ def choose():
         crm.start_module()
     elif option == "7":
         data_analyser.start_module()
-    elif option == "8":
-        customer_sales_association.start_module()
     elif option == "0":
         sys.exit(0)
     else:
