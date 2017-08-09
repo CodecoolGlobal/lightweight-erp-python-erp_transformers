@@ -290,7 +290,7 @@ def get_all_customer_ids_from_table(table):
     """
     Returns a set of customer_ids that are present in the table.
     Args:
-        table (list of list): association table between sales and customers
+        table (list of list): the sales table
     Returns:
          set of customer_ids that are present in the table
     """
@@ -324,7 +324,7 @@ def get_all_sales_ids_for_customer_ids_form_table(table):
         sale_ids (list): all the sales belong to the given customer
     (one customer id belongs to only one tuple)
     Args:
-        table (list of list): association table between sales and customers
+        table (list of list): the sales table
     Returns:
          (dict of (key, value): (customer_id, (list) sale_ids)) where the sale_ids list contains
          all the sales id belong to the given customer_id
@@ -356,7 +356,7 @@ def get_num_of_sales_per_customer_ids_from_table(table):
         customer_id:
         num_of_sales (number): number of sales the customer made
      Args:
-        table (list of list): association table between sales and customers
+        table (list of list): the sales table
      Returns:
          dict of (key, value): (customer_id (str), num_of_sales (number))
     """
