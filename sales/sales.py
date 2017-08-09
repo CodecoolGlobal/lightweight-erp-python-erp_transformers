@@ -303,7 +303,7 @@ def get_all_customer_ids_from_table(table):
 def get_all_sales_ids_for_customer_ids():
     """
     Reads the customer-sales association table with the help of the data_manager module.
-    Returns a set of (customer_id, sale_ids) tuples where:
+    Returns a dictionary of (customer_id, sale_ids) where:
         customer_id:
         sale_ids (list): all the sales belong to the given customer
     (one customer id belongs to only one tuple)
@@ -319,7 +319,7 @@ def get_all_sales_ids_for_customer_ids():
 
 def get_all_sales_ids_for_customer_ids_form_table(table):
     """
-    Returns a set of (customer_id, sale_ids) tuples where:
+    Returns a dictionary of (customer_id, sale_ids) where:
         customer_id:
         sale_ids (list): all the sales belong to the given customer
     (one customer id belongs to only one tuple)
@@ -338,7 +338,7 @@ def get_all_sales_ids_for_customer_ids_form_table(table):
 def get_num_of_sales_per_customer_ids():
     """
      Reads the customer-sales association table with the help of the data_manager module.
-     Returns a set of (customer_id, num_of_sales) tuples where:
+     Returns a dictionary of (customer_id, num_of_sales) where:
         customer_id:
         num_of_sales (number): number of sales the customer made
      Returns:
@@ -352,7 +352,7 @@ def get_num_of_sales_per_customer_ids():
 
 def get_num_of_sales_per_customer_ids_from_table(table):
     """
-     Returns a set of (customer_id, num_of_sales) tuples where:
+     Returns a dictionary of (customer_id, num_of_sales) where:
         customer_id:
         num_of_sales (number): number of sales the customer made
      Args:
