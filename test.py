@@ -18,6 +18,12 @@ from crm import crm
 
 
 def compare_lists(tester, expected_list, result_list):
+    if len(expected_list) == 0 and len(result_list) == 0:
+        return
+
+    if len(expected_list) != 0 and len(result_list) == 0:
+        tester.assertListEqual(result_list, expected_list)
+
     for item in result_list:
         tester.assertTrue(item in expected_list)
 
