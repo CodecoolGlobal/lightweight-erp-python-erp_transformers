@@ -1,7 +1,6 @@
 # Do not modify this file (if you want to modify anyway, contact a mentor before, who will explain why do not modify)
 
 import unittest
-import os
 import data_manager
 # Store module
 from store import store
@@ -115,7 +114,7 @@ class AccountingTester(unittest.TestCase):
     def test_forbidden_functions(self):
         check_forbidden_functions(self, "accounting/accounting.py")
 
-    def test_check_burnin_dates(self):
+    def test_check_burnt_in_dates(self):
         with open("accounting/accounting.py", "r") as file:
             lines = file.read()
             self.assertEqual(lines.find("2015"), -1)
@@ -141,7 +140,7 @@ class CRMTester(unittest.TestCase):
     def test_get_longest_name_id(self):
         table = data_manager.get_table_from_file(self.data_file)
         result = crm.get_longest_name_id(table)
-        self.assertEqual(result, "kH14Ju#&")
+        self.assertEqual(result, "kH94Ju#&")
 
     def test_get_subscribed_emails(self):
         table = data_manager.get_table_from_file(self.data_file)
@@ -236,6 +235,7 @@ class InventoryTester(unittest.TestCase):
 
 def main():
     unittest.main()
+
 
 if __name__ == '__main__':
     main()
