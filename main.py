@@ -3,7 +3,6 @@
 
 
 import sys
-import os
 import ui  # User Interface
 # Store module
 from store import store
@@ -61,7 +60,7 @@ def main():
         try:
             choose()
         except KeyError as err:
-            ui.print_error_message(err)
+            ui.print_error_message(str(err))
 
 
 if __name__ == '__main__':

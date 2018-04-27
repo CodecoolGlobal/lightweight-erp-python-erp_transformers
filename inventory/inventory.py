@@ -1,14 +1,15 @@
-# data structure:
-# id: string
-#     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
-# name: string
-# manufacturer: string
-# purchase_date: number (year)
-# durability: number (year)
+""" Inventory module
 
+Data table structure:
+    * id (string): Unique and random generated identifier
+        at least 2 special characters (except: ';'), 2 number, 2 lower and 2 upper case letters)
+    * name (string): Name of item
+    * manufacturer (string)
+    * purchase_year (number): Year of purchase
+    * durability (number): Years it can be used
+"""
 
-# importing everything you need
-import os
+# everything you'll need is imported:
 # User interface module
 import ui
 # data manager module
@@ -20,24 +21,8 @@ import common
 def start_module():
     """
     Starts this module and displays its menu.
-    User can access default special features from here.
-    User can go back to main menu from here.
-
-    Returns:
-        None
-    """
-
-    # you code
-
-    pass
-
-
-def show_table(table):
-    """
-    Display a table
-
-    Args:
-        table: list of lists to be displayed.
+     * User can access default special features from here.
+     * User can go back to main menu from here.
 
     Returns:
         None
@@ -45,7 +30,19 @@ def show_table(table):
 
     # your code
 
-    pass
+
+def show_table(table):
+    """
+    Display a table
+
+    Args:
+        table (list): list of lists to be displayed.
+
+    Returns:
+        None
+    """
+
+    # your code
 
 
 def add(table):
@@ -53,10 +50,10 @@ def add(table):
     Asks user for input and adds it into the table.
 
     Args:
-        table: table to add new record to
+        table (list): table to add new record to
 
     Returns:
-        Table with a new record
+        list: Table with a new record
     """
 
     # your code
@@ -69,11 +66,11 @@ def remove(table, id_):
     Remove a record with a given id from the table.
 
     Args:
-        table: table to remove a record from
+        table (list): table to remove a record from
         id_ (str): id of a record to be removed
 
     Returns:
-        Table without specified record.
+        list: Table without specified record.
     """
 
     # your code
@@ -86,11 +83,11 @@ def update(table, id_):
     Updates specified record in the table. Ask users for new data.
 
     Args:
-        table: list in which record should be updated
+        table (list): list in which record should be updated
         id_ (str): id of a record to update
 
     Returns:
-        table with updated record
+        list: table with updated record
     """
 
     # your code
@@ -101,23 +98,29 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-# the question: Which items have not exceeded their durability yet?
-# return type: list of lists (the inner list contains the whole row with their actual data types)
-#
-# @table: list of lists
 def get_available_items(table):
+    """
+    Question: Which items have not exceeded their durability yet?
+
+    Args:
+        table (list): data table to work on
+
+    Returns:
+        list: list of lists (the inner list contains the whole row with their actual data types)
+    """
 
     # your code
 
-    pass
 
-
-# the question: What are the average durability times for each manufacturer?
-# return type: a dictionary with this structure: { [manufacturer] : [avg] }
-#
-# @table: list of lists
 def get_average_durability_by_manufacturers(table):
+    """
+    Question: What are the average durability times for each manufacturer?
+
+    Args:
+        table (list): data table to work on
+
+    Returns:
+        dict: a dictionary with this structure: { [manufacturer] : [avg] }
+    """
 
     # your code
-
-    pass
