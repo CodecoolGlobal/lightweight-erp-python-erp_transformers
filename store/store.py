@@ -1,13 +1,15 @@
-# data structure:
-# id: string
-#     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
-# title: string
-# manufacturer: string
-# price: number (dollars)
-# in_stock: number
+""" Store module
 
-# importing everything you need
-import os
+Data table structure:
+    * id (string): Unique and random generated identifier
+        at least 2 special characters (except: ';'), 2 number, 2 lower and 2 upper case letters)
+    * title (string): Title of the game
+    * manufacturer (string)
+    * price (number): Price in dollars
+    * in_stock (number)
+"""
+
+# everything you'll need is imported:
 # User interface module
 import ui
 # data manager module
@@ -19,16 +21,14 @@ import common
 def start_module():
     """
     Starts this module and displays its menu.
-    User can access default special features from here.
-    User can go back to main menu from here.
+     * User can access default special features from here.
+     * User can go back to main menu from here.
 
     Returns:
         None
     """
 
     # your code
-
-    pass
 
 
 def show_table(table):
@@ -36,7 +36,7 @@ def show_table(table):
     Display a table
 
     Args:
-        table: list of lists to be displayed.
+        table (list): list of lists to be displayed.
 
     Returns:
         None
@@ -44,18 +44,16 @@ def show_table(table):
 
     # your code
 
-    pass
-
 
 def add(table):
     """
     Asks user for input and adds it into the table.
 
     Args:
-        table: table to add new record to
+        table (list): table to add new record to
 
     Returns:
-        Table with a new record
+        list: Table with a new record
     """
 
     # your code
@@ -68,11 +66,11 @@ def remove(table, id_):
     Remove a record with a given id from the table.
 
     Args:
-        table: table to remove a record from
+        table (list): table to remove a record from
         id_ (str): id of a record to be removed
 
     Returns:
-        Table without specified record.
+        list: Table without specified record.
     """
 
     # your code
@@ -89,7 +87,7 @@ def update(table, id_):
         id_ (str): id of a record to update
 
     Returns:
-        table with updated record
+        list: table with updated record
     """
 
     # your code
@@ -100,19 +98,30 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-# the question: How many different kinds of game are available of each manufacturer?
-# return type: a dictionary with this structure: { [manufacturer] : [count] }
 def get_counts_by_manufacturers(table):
+    """
+    Question: How many different kinds of game are available of each manufacturer?
+
+    Args:
+        table (list): data table to work on
+
+    Returns:
+         dict: A dictionary with this structure: { [manufacturer] : [count] }
+    """
 
     # your code
 
-    pass
 
-
-# the question: What is the average amount of games in stock of a given manufacturer?
-# return type: number
 def get_average_by_manufacturer(table, manufacturer):
+    """
+    Question: What is the average amount of games in stock of a given manufacturer?
+
+    Args:
+        table (list): data table to work on
+        manufacturer (str): Name of manufacturer
+
+    Returns:
+         number
+    """
 
     # your code
-
-    pass

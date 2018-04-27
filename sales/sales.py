@@ -1,15 +1,16 @@
-# data structure:
-# id: string
-#     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
-# title: string
-# price: number (the actual sale price in $)
-# month: number
-# day: number
-# year: number
-# month,year and day combined gives the date the sale was made
+""" Sales module
 
-# importing everything you need
-import os
+Data table structure:
+    * id (string): Unique and random generated identifier
+        at least 2 special characters (except: ';'), 2 number, 2 lower and 2 upper case letters)
+    * title (string): Title of the game sold
+    * price (number): The actual sale price in USD
+    * month (number): Month of the sale
+    * day (number): Day of the sale
+    * year (number): Year of the sale
+"""
+
+# everything you'll need is imported:
 # User interface module
 import ui
 # data manager module
@@ -21,16 +22,14 @@ import common
 def start_module():
     """
     Starts this module and displays its menu.
-    User can access default special features from here.
-    User can go back to main menu from here.
+     * User can access default special features from here.
+     * User can go back to main menu from here.
 
     Returns:
         None
     """
 
     # your code
-
-    pass
 
 
 def show_table(table):
@@ -38,7 +37,7 @@ def show_table(table):
     Display a table
 
     Args:
-        table: list of lists to be displayed.
+        table (list): list of lists to be displayed.
 
     Returns:
         None
@@ -46,18 +45,16 @@ def show_table(table):
 
     # your code
 
-    pass
-
 
 def add(table):
     """
     Asks user for input and adds it into the table.
 
     Args:
-        table: table to add new record to
+        table (list): table to add new record to
 
     Returns:
-        Table with a new record
+        list: Table with a new record
     """
 
     # your code
@@ -70,11 +67,11 @@ def remove(table, id_):
     Remove a record with a given id from the table.
 
     Args:
-        table: table to remove a record from
+        table (list): table to remove a record from
         id_ (str): id of a record to be removed
 
     Returns:
-        Table without specified record.
+        list: Table without specified record.
     """
 
     # your code
@@ -87,11 +84,11 @@ def update(table, id_):
     Updates specified record in the table. Ask users for new data.
 
     Args:
-        table: list in which record should be updated
+        table (list): list in which record should be updated
         id_ (str): id of a record to update
 
     Returns:
-        table with updated record
+        list: table with updated record
     """
 
     # your code
@@ -102,20 +99,36 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-# the question: What is the id of the item that was sold for the lowest price ?
-# return type: string (id)
-# if there are more than one with the lowest price, return the first by descending alphabetical order
 def get_lowest_price_item_id(table):
+    """
+    Question: What is the id of the item that was sold for the lowest price?
+    if there are more than one item at the lowest price, return the last item by alphabetical order of the title
+
+    Args:
+        table (list): data table to work on
+
+    Returns:
+         string: id
+    """
 
     # your code
 
-    pass
 
-
-# the question: Which items are sold between two given dates ? (from_date < sale_date < to_date)
-# return type: list of lists (the filtered table)
 def get_items_sold_between(table, month_from, day_from, year_from, month_to, day_to, year_to):
+    """
+    Question: Which items are sold between two given dates? (from_date < sale_date < to_date)
+
+    Args:
+        table (list): data table to work on
+        month_from (int)
+        day_from (int)
+        year_from (int)
+        month_to (int)
+        day_to (int)
+        year_to (int)
+
+    Returns:
+        list: list of lists (the filtered table)
+    """
 
     # your code
-
-    pass

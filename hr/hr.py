@@ -1,12 +1,13 @@
-# data structure:
-# id: string
-#     Unique and random generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
-# name: string
-# birth_date: number (year)
+""" Human resources module
 
+Data table structure:
+    * id (string): Unique and random generated identifier
+        at least 2 special characters (except: ';'), 2 number, 2 lower and 2 upper case letters)
+    * name (string)
+    * birth_year (number)
+"""
 
-# importing everything you need
-import os
+# everything you'll need is imported:
 # User interface module
 import ui
 # data manager module
@@ -18,16 +19,14 @@ import common
 def start_module():
     """
     Starts this module and displays its menu.
-    User can access default special features from here.
-    User can go back to main menu from here.
+     * User can access default special features from here.
+     * User can go back to main menu from here.
 
     Returns:
         None
     """
 
     # your code
-
-    pass
 
 
 def show_table(table):
@@ -35,7 +34,7 @@ def show_table(table):
     Display a table
 
     Args:
-        table: list of lists to be displayed.
+        table (list): list of lists to be displayed.
 
     Returns:
         None
@@ -43,18 +42,16 @@ def show_table(table):
 
     # your code
 
-    pass
-
 
 def add(table):
     """
     Asks user for input and adds it into the table.
 
     Args:
-        table: table to add new record to
+        table (list): table to add new record to
 
     Returns:
-        Table with a new record
+        list: Table with a new record
     """
 
     # your code
@@ -67,11 +64,11 @@ def remove(table, id_):
     Remove a record with a given id from the table.
 
     Args:
-        table: table to remove a record from
+        table (list): table to remove a record from
         id_ (str): id of a record to be removed
 
     Returns:
-        Table without specified record.
+        list: Table without specified record.
     """
 
     # your code
@@ -84,11 +81,11 @@ def update(table, id_):
     Updates specified record in the table. Ask users for new data.
 
     Args:
-        table: list in which record should be updated
+        table (list): list in which record should be updated
         id_ (str): id of a record to update
 
     Returns:
-        table with updated record
+        list: table with updated record
     """
 
     # your code
@@ -99,19 +96,29 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-# the question: Who is the oldest person ?
-# return type: list of strings (name or names if there are two more with the same value)
 def get_oldest_person(table):
+    """
+    Question: Who is the oldest person?
+
+    Args:
+        table (list): data table to work on
+
+    Returns:
+        list: A list of strings (name or names if there are two more with the same value)
+    """
 
     # your code
 
-    pass
 
-
-# the question: Who is the closest to the average age ?
-# return type: list of strings (name or names if there are two more with the same value)
 def get_persons_closest_to_average(table):
+    """
+    Question: Who is the closest to the average age?
+
+    Args:
+        table (list): data table to work on
+
+    Returns:
+        list: list of strings (name or names if there are two more with the same value)
+    """
 
     # your code
-
-    pass

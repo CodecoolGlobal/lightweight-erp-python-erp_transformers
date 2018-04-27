@@ -1,13 +1,14 @@
-# data structure:
-# id: string
-#     Unique and randomly generated (at least 2 special char()expect: ';'), 2 number, 2 lower and 2 upper case letter)
-# name: string
-# email: string
-# subscribed: boolean (Is she/he subscribed to the newsletter? 1/0 = yes/not)
+""" Customer Relationship Management (CRM) module
 
+Data table structure:
+    * id (string): Unique and random generated identifier
+        at least 2 special characters (except: ';'), 2 number, 2 lower and 2 upper case letters)
+    * name (string)
+    * email (string)
+    * subscribed (int): Is she/he subscribed to the newsletter? 1/0 = yes/no
+"""
 
-# importing everything you need
-import os
+# everything you'll need is imported:
 # User interface module
 import ui
 # data manager module
@@ -19,16 +20,14 @@ import common
 def start_module():
     """
     Starts this module and displays its menu.
-    User can access default special features from here.
-    User can go back to main menu from here.
+     * User can access default special features from here.
+     * User can go back to main menu from here.
 
     Returns:
         None
     """
 
     # your code
-
-    pass
 
 
 def show_table(table):
@@ -36,7 +35,7 @@ def show_table(table):
     Display a table
 
     Args:
-        table: list of lists to be displayed.
+        table (list): list of lists to be displayed.
 
     Returns:
         None
@@ -44,18 +43,16 @@ def show_table(table):
 
     # your code
 
-    pass
-
 
 def add(table):
     """
     Asks user for input and adds it into the table.
 
     Args:
-        table: table to add new record to
+        table (list): table to add new record to
 
     Returns:
-        Table with a new record
+        list: Table with a new record
     """
 
     # your code
@@ -68,11 +65,11 @@ def remove(table, id_):
     Remove a record with a given id from the table.
 
     Args:
-        table: table to remove a record from
+        table (list): table to remove a record from
         id_ (str): id of a record to be removed
 
     Returns:
-        Table without specified record.
+        list: Table without specified record.
     """
 
     # your code
@@ -85,11 +82,11 @@ def update(table, id_):
     Updates specified record in the table. Ask users for new data.
 
     Args:
-        table: list in which record should be updated
+        table (list): list in which record should be updated
         id_ (str): id of a record to update
 
     Returns:
-        table with updated record
+        list: table with updated record
     """
 
     # your code
@@ -100,21 +97,32 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-
-# the question: What is the id of the customer with the longest name ?
-# return type: string (id) - if there are more than one longest name, return
-#   the first by descending alphabetical order of the names
 def get_longest_name_id(table):
+    """
+        Question: What is the id of the customer with the longest name?
+
+        Args:
+            table (list): data table to work on
+
+        Returns:
+            string: id of the longest name (if there are more than one, return
+                the last by alphabetical order of the names)
+        """
 
     # your code
-
-    pass
 
 
 # the question: Which customers has subscribed to the newsletter?
 # return type: list of strings (where string is like email+separator+name, separator=";")
 def get_subscribed_emails(table):
+    """
+        Question: Which customers has subscribed to the newsletter?
+
+        Args:
+            table (list): data table to work on
+
+        Returns:
+            list: list of strings (where a string is like "email;name")
+        """
 
     # your code
-
-    pass

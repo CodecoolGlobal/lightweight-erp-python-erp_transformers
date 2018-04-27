@@ -1,8 +1,11 @@
+""" User Interface (UI) module """
 
 
 def print_table(table, title_list):
     """
-    Prints table with data. Sample output:
+    Prints table with data.
+
+    Example:
         /-----------------------------------\
         |   id   |      title     |  type   |
         |--------|----------------|---------|
@@ -12,16 +15,14 @@ def print_table(table, title_list):
         \-----------------------------------/
 
     Args:
-        table: list of lists - table to display
-        title_list: list containing table headers
+        table (list): list of lists - table to display
+        title_list (list): list containing table headers
 
     Returns:
-        This function doesn't return anything it only prints to console.
+        None: This function doesn't return anything it only prints to console.
     """
 
     # your goes code
-
-    pass
 
 
 def print_result(result, label):
@@ -29,16 +30,14 @@ def print_result(result, label):
     Displays results of the special functions.
 
     Args:
-        result: string, list or dictionary - result of the special function
-        label: label of the result
+        result: result of the special function (string, list or dict)
+        label (str): label of the result
 
     Returns:
-        This function doesn't return anything it only prints to console.
+        None: This function doesn't return anything it only prints to console.
     """
 
     # your code
-
-    pass
 
 
 def print_menu(title, list_options, exit_message):
@@ -59,12 +58,10 @@ def print_menu(title, list_options, exit_message):
         exit_message (str): the last option with (0) (example: "Back to main menu")
 
     Returns:
-        This function doesn't return anything it only prints to console.
+        None: This function doesn't return anything it only prints to console.
     """
 
     # your code
-
-    pass
 
 
 def get_inputs(list_labels, title):
@@ -79,11 +76,11 @@ def get_inputs(list_labels, title):
         Age <user_input_3>
 
     Args:
-        list_labels: list of strings - labels of inputs
-        title: title of the "input section"
+        list_labels (list): labels of inputs
+        title (string): title of the "input section"
 
     Returns:
-        List of data given by the user. Sample return:
+        list: List of data given by the user. Sample return:
             [<user_input_1>, <user_input_2>, <user_input_3>]
     """
     inputs = []
@@ -93,20 +90,15 @@ def get_inputs(list_labels, title):
     return inputs
 
 
-# This function displays an error message. (example: Error: @message)
-#
-# @message: string - the error message
 def print_error_message(message):
     """
-    Displays an error message
+    Displays an error message (example: ``Error: @message``)
 
     Args:
-        message(str): error message to be displayed
+        message (str): error message to be displayed
 
     Returns:
-        This function doesn't return anything it only prints to console.
+        None: This function doesn't return anything it only prints to console.
     """
 
     # your code
-
-    pass
