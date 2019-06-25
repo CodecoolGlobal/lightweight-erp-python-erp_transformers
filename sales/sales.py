@@ -311,7 +311,7 @@ def get_all_sales_ids_for_customer_ids():
     # your code
 
 
-def get_all_sales_ids_for_customer_ids_form_table(table):
+def get_all_sales_ids_for_customer_ids_from_table(table):
     """
     Returns a dictionary of (customer_id, sale_ids) where:
         customer_id:
