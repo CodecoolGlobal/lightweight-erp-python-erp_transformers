@@ -2,7 +2,7 @@
 This module creates reports for the marketing department.
 This module can run independently from other modules.
 Has no own data structure but uses other modules.
-Avoud using the database (ie. .csv files) of other modules directly.
+Avoid using the database (ie. .csv files) of other modules directly.
 Use the functions of the modules instead.
 """
 
