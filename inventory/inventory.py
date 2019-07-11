@@ -98,12 +98,13 @@ def update(table, id_):
 # special functions:
 # ------------------
 
-def get_available_items(table):
+def get_available_items(table, year):
     """
-    Question: Which items have not exceeded their durability yet?
+    Question: Which items have not exceeded their durability yet (in a given year)?
 
     Args:
         table (list): data table to work on
+        year (number)
 
     Returns:
         list: list of lists (the inner list contains the whole row with their actual data types)
