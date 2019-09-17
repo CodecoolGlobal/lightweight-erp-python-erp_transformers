@@ -30,7 +30,7 @@ def print_result(result, label):
     Displays results of the special functions.
 
     Args:
-        result: result of the special function (string, list or dict)
+        result: result of the special function (string, number, list or dict)
         label (str): label of the result
 
     Returns:
