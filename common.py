@@ -9,8 +9,6 @@ import main
 import ui
 
 
-
-
 def generate_random(table):
     """
     Generates random and unique string. Used for id/key generation:
@@ -23,11 +21,21 @@ def generate_random(table):
     Returns:
         string: Random and unique string
     """
-
+    ID_LENGTH = 8
+    ID_LIST_INDEX = 0
     generated = ''
-
+    FEW_UNICODE_CHAR = {'!': 33, "'": 39, '0': 48, '9': 57, ':': 58, ';': 59, '@': 64, 'A': 65, 'Z': 90, 'a': 97, 'z': 122}
     # your code
-
+    char_counter_list = [('!', "'"), ('0', '9'), ('A', 'Z'), ('a', 'z'), ('!', "'"), ('0', '9'), ('A', 'Z'), ('a', 'z')]
+    special_id_list_in_file = [row[ID_LIST_INDEX] for row in table]
+    char_counter = 0
+    for special_char_id in range(ID_LENGTH):
+        first_char_in_group, last_char_in_group = char_counter_list[char_counter][0], char_counter_list[char_counter][1]
+        special_char_id = chr(random.randint(FEW_UNICODE_CHAR[first_char_in_group], FEW_UNICODE_CHAR[last_char_in_group]))
+        generated += special_char_id
+        char_counter += 1
+    if generated in special_id_list_in_file:
+        generate_random(table)
     return generated
 
 
