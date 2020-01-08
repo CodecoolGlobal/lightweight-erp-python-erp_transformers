@@ -100,6 +100,8 @@ def add(table):
 
     # your code
 
+    table.append(ui.get_inputs(['id ', 'title ', 'manufacturer ','price ', 'in stock '],"Please insert data: "))
+    data_manager.write_table_to_file('store/games.csv', table)
     return table
 
 
