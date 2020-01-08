@@ -18,17 +18,7 @@ import data_manager
 import common
 
 
-def start_module():
-    """
-    Starts this module and displays its menu.
-     * User can access default special features from here.
-     * User can go back to main menu from here.
 
-    Returns:
-        None
-    """
-
-    # your code
 
 
 def show_table(table):
@@ -125,3 +115,22 @@ def get_average_by_manufacturer(table, manufacturer):
     """
 
     # your code
+
+
+def start_module():
+    """
+    Starts this module and displays its menu.
+     * User can access default special features from here.
+     * User can go back to main menu from here.
+
+    Returns:
+        None
+    """
+    manufacturer = 0
+    table = [1]
+    id_ = 231
+    options = ['show table',
+                'add',
+                'remove',
+                'update']
+    common.sub_menu(get_counts_by_manufacturers(table), get_average_by_manufacturer(table, manufacturer), options)
