@@ -114,9 +114,13 @@ def remove(table, id_):
     Returns:
         list: Table without specified record.
     """
-
-    # your code
-
+    ID = 0
+    line_counter = 0
+    for row in table:
+        if row[ID] == id_[ID]:
+            table.remove(row)
+        line_counter += 1
+    data_manager.write_table_to_file('store/games.csv', table)
     return table
 
 
