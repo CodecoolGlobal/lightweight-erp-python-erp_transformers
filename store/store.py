@@ -55,12 +55,12 @@ def add_wrapper():
 
 def remove_wrapper():
     table = data_manager.get_table_from_file('store/games.csv')
-    remove(table, ui.get_inputs(['ID'], 'Enter ID: '))
+    remove(table, ui.get_inputs(['ID :'], 'Enter ID: '))
 
 
 def update_wrapper():
     table = data_manager.get_table_from_file('store/games.csv')
-    update(table, ui.get_inputs(['ID'], 'Enter ID: '))
+    update(table, ui.get_inputs(['ID :'], 'Enter ID: '))
 
 
 def get_counts_by_manufacturers_wrapper():
@@ -99,8 +99,10 @@ def add(table):
     """
 
     # your code
-
-    table.append(ui.get_inputs(['id ', 'title ', 'manufacturer ','price ', 'in stock '],"Please insert data: "))
+    ID_INDEX = 0
+    record = ui.get_inputs(['title: ', 'manufacturer: ', 'price: ', 'in stock: '], "Please insert data: ")
+    record.insert(ID_INDEX, common.generate_random(table))
+    table.append(record)
     data_manager.write_table_to_file('store/games.csv', table)
     return table
 
@@ -116,10 +118,10 @@ def remove(table, id_):
     Returns:
         list: Table without specified record.
     """
-    ID = 0
+    ID_LIST_INDEX = 0
     line_counter = 0
     for row in table:
-        if row[ID] == id_[ID]:
+        if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
             table.remove(row)
         line_counter += 1
     data_manager.write_table_to_file('store/games.csv', table)
