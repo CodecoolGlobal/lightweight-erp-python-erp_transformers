@@ -18,7 +18,59 @@ import data_manager
 import common
 
 
+def start_module():
+    """
+    Starts this module and displays its menu.
+     * User can access default special features from here.
+     * User can go back to main menu from here.
 
+    Returns:
+        None
+    """
+
+    options = ['show table',
+                'add',
+                'remove',
+                'update',
+                'get count by manufacturers',
+                'get average by manufacturer']
+    dict_menu = {'1': show_table_wrapper,
+                '2': add_wrapper,
+                '3': remove_wrapper,
+                '4': update_wrapper,
+                '5': get_counts_by_manufacturers_wrapper,
+                '6': get_average_by_manufacturer_wrapper}
+    common.sub_menu(dict_menu, options, "Store menu")
+
+
+def show_table_wrapper():
+    table = data_manager.get_table_from_file('store/games.csv')
+    show_table(table)
+
+
+def add_wrapper():
+    table = data_manager.get_table_from_file('store/games.csv')
+    add(table)
+
+
+def remove_wrapper():
+    table = data_manager.get_table_from_file('store/games.csv')
+    remove(table, ui.get_inputs(['ID'], 'Enter ID: '))
+
+
+def update_wrapper():
+    table = data_manager.get_table_from_file('store/games.csv')
+    update(table, ui.get_inputs(['ID'], 'Enter ID: '))
+
+
+def get_counts_by_manufacturers_wrapper():
+    table = data_manager.get_table_from_file('store/games.csv')
+    get_counts_by_manufacturers(table)
+
+
+def get_average_by_manufacturer_wrapper():
+    table = data_manager.get_table_from_file('store/games.csv')
+    get_average_by_manufacturer(table, ui.get_inputs(['Manufacturer'], 'Enter manufacturer: '))
 
 
 def show_table(table):
@@ -32,7 +84,7 @@ def show_table(table):
         None
     """
 
-    # your code
+    ui.print_table(table,'Store')
 
 
 def add(table):
@@ -113,24 +165,4 @@ def get_average_by_manufacturer(table, manufacturer):
     Returns:
          number
     """
-
     # your code
-
-
-def start_module():
-    """
-    Starts this module and displays its menu.
-     * User can access default special features from here.
-     * User can go back to main menu from here.
-
-    Returns:
-        None
-    """
-    manufacturer = 0
-    table = [1]
-    id_ = 231
-    options = ['show table',
-                'add',
-                'remove',
-                'update']
-    common.sub_menu(get_counts_by_manufacturers(table), get_average_by_manufacturer(table, manufacturer), options)
