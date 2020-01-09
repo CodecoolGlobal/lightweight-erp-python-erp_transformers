@@ -27,9 +27,49 @@ def start_module():
     Returns:
         None
     """
-
+    options = ['show table',
+                'add',
+                'remove',
+                'update',
+                'get available items',
+                'get_average_durability_by_manufacturers']
+    dict_menu = {'1': show_table_wrapper,
+                '2': add_wrapper,
+                '3': remove_wrapper,
+                '4': update_wrapper,
+                '5': get_available_items_wrapper,
+                '6': get_average_durability_by_manufacturers_wrapper}
+    common.sub_menu(dict_menu, options, "Inventory menu")
     # your code
 
+def show_table_wrapper():
+    table = data_manager.get_table_from_file('inventory/inventory.csv')
+    show_table(table)
+
+
+def add_wrapper():
+    table = data_manager.get_table_from_file('inventory/inventory.csv')
+    add(table)
+
+
+def remove_wrapper():
+    table = data_manager.get_table_from_file('inventory/inventory.csv')
+    remove(table, ui.get_inputs(['ID :'], 'Enter ID: '))
+
+
+def update_wrapper():
+    table = data_manager.get_table_from_file('inventory/inventory.csv')
+    update(table, ui.get_inputs(['ID :'], 'Enter ID: '))
+
+
+def get_available_items_wrapper():
+    table = data_manager.get_table_from_file('inventory/inventory.csv')
+    get_available_items_wrapper(table)
+
+
+def get_average_durability_by_manufacturers_wrapper():
+    table = data_manager.get_table_from_file('inventory/inventory.csv')
+    get_average_durability_by_manufacturers(table, ui.get_inputs(['Manufacturer'], 'Enter manufacturer: '))
 
 def show_table(table):
     """
@@ -41,8 +81,8 @@ def show_table(table):
     Returns:
         None
     """
-
-    # your code
+    titles_list = ['id: ', 'name: ', 'manufacturer: ', 'purchase_year: ', 'durability: ']
+    ui.print_table(table, titles_list)
 
 
 def add(table):
@@ -56,8 +96,12 @@ def add(table):
         list: Table with a new record
     """
 
-    # your code
-
+    ID_INDEX = 0
+    record = ui.get_inputs(['name: ', 'manufacturer: ', 'purchase_year: ', 'durability: '], "Please insert data: ")
+    record.insert(ID_INDEX, common.generate_random(table))
+    print(record)
+    table.append(record)
+    data_manager.write_table_to_file('inventory/inventory.csv', table)
     return table
 
 
@@ -73,8 +117,11 @@ def remove(table, id_):
         list: Table without specified record.
     """
 
-    # your code
-
+    ID_LIST_INDEX = 0
+    for row in table:
+        if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
+            table.remove(row)
+    data_manager.write_table_to_file('inventory/inventory.csv', table)
     return table
 
 
@@ -90,8 +137,15 @@ def update(table, id_):
         list: table with updated record
     """
 
-    # your code
-
+    ID_LIST_INDEX = 0
+    iterate = 0
+    for row in table:
+        if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
+            updated_record = ui.get_inputs(['id: ', 'name: ', 'manufacturer: ', 'purchase_year: ', 'durability: '], row)
+            table[iterate] = updated_record
+            data_manager.write_table_to_file('inventory/inventory.csv', table)
+            break
+        iterate += 1
     return table
 
 
