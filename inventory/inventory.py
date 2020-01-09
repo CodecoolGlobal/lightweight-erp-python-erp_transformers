@@ -64,12 +64,13 @@ def update_wrapper():
 
 def get_available_items_wrapper():
     table = data_manager.get_table_from_file('inventory/inventory.csv')
-    get_available_items_wrapper(table)
+    get_available_items_wrapper(table, ui.get_inputs(['Year :'], 'Enter year: '))
 
 
 def get_average_durability_by_manufacturers_wrapper():
     table = data_manager.get_table_from_file('inventory/inventory.csv')
-    get_average_durability_by_manufacturers(table, ui.get_inputs(['Manufacturer'], 'Enter manufacturer: '))
+    get_average_durability_by_manufacturers(table)
+
 
 def show_table(table):
     """
