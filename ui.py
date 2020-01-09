@@ -1,5 +1,8 @@
 """ User Interface (UI) module """
+import data_manager
 
+title_list = ['id', 'title', 'company','sold copies', 'something']
+table = data_manager.get_table_from_file('store/games.csv')
 
 def print_table(table, title_list):
     """
@@ -21,9 +24,54 @@ def print_table(table, title_list):
     Returns:
         None: This function doesn't return anything it only prints to console.
     """
+    dash_char = "-"
+    max_len_column = [0,0,0,0,0,0,0]
+    column_counter = 0
 
-    # your goes code
+    #maximum length of every element in title data base (max_len_column)
+    for rows in title_list:
+        if len(rows) > max_len_column[column_counter]:
+            max_len_column[column_counter] = len(rows)
+            column_counter += 1
 
+    #maximum Lenght of every row in table data base. (max_len_column)
+    for rows in table:
+        column_counter = 0
+        for column in rows:
+            if len(column) > max_len_column[column_counter]:
+                max_len_column[column_counter] = len(column)
+            column_counter += 1
+
+    maximum_row_length = 2 #number of '/' in a row
+    for i in max_len_column:
+        maximum_row_length += i + 1 # +1 becouse of '|'
+
+    #header
+    print(f"/{dash_char * maximum_row_length}\ ")
+
+    #title
+    counter = 0
+    for title in title_list:
+        print(f'| {title.center(max_len_column[counter])}', end = "")
+        counter += 1
+    print("|")
+
+    #seperator
+    for rows in table:
+        counter = 0
+        print(f"|{dash_char * maximum_row_length}|")
+        for column in rows:
+            print(f"| {column.center(max_len_column[counter])}", end = "")
+            counter += 1
+        print('|')
+
+    #footer
+    print(f"\{dash_char * maximum_row_length}/")
+
+
+
+
+print_table(table, title_list)
 
 def print_result(result, label):
     """
