@@ -31,7 +31,7 @@ def print_table(table, title_list):
             max_len_column[column_counter] = len(rows)
             column_counter += 1
 
-    #maximum Lenght of every row in table data base. (max_len_column)
+    #maximum Length of every row in table data base. (max_len_column)
     for rows in table:
         column_counter = 0
         for column in rows:
@@ -39,12 +39,18 @@ def print_table(table, title_list):
                 max_len_column[column_counter] = len(column)
             column_counter += 1
 
-    maximum_row_length = 2 #number of '/' in a row
-    for i in max_len_column:
-        maximum_row_length += i + 1 # +1 becouse of '|'
-
     #header
-    print(f"/{dash_char * maximum_row_length}\ ")
+    print("/",end = '')
+    counter = 0
+    for i in max_len_column:
+        if i != 0:
+            counter += 1
+            if counter == len(title_list):
+                print(f"{dash_char * (i + 1)}\\",end = '')
+            else:
+                print(f"{dash_char * (i + 1)}|",end = '')
+    print("")
+
 
     #title
     counter = 0
@@ -53,17 +59,28 @@ def print_table(table, title_list):
         counter += 1
     print("|")
 
-    #seperator
+    #data
     for rows in table:
         counter = 0
-        print(f"|{dash_char * maximum_row_length}|")
+        for i in max_len_column:
+            if i != 0:
+                print(f"|{dash_char * (i + 1)}", end = '')
+        print("|")
         for column in rows:
             print(f"| {column.center(max_len_column[counter])}", end = "")
             counter += 1
         print('|')
 
     #footer
-    print(f"\{dash_char * maximum_row_length}/")
+    print("\\",end = '')
+    counter = 0
+    for i in max_len_column:
+        if i != 0:
+            counter += 1
+            if counter == len(title_list):
+                print(f"{dash_char * (i + 1)}/",end = '')
+            else:
+                print(f"{dash_char * (i + 1)}|",end = '')
 
 
 def print_result(result, label):
