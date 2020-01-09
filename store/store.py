@@ -119,11 +119,9 @@ def remove(table, id_):
         list: Table without specified record.
     """
     ID_LIST_INDEX = 0
-    line_counter = 0
     for row in table:
         if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
             table.remove(row)
-        line_counter += 1
     data_manager.write_table_to_file('store/games.csv', table)
     return table
 
