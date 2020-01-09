@@ -84,7 +84,8 @@ def show_table(table):
         None
     """
 
-    ui.print_table(table,'Store')
+    titles_list = ['title: ', 'manufacturer: ', 'price: ', 'in stock: ']
+    ui.print_table(table, titles_list)
 
 
 def add(table):
@@ -139,7 +140,15 @@ def update(table, id_):
     """
 
     # your code
-
+    ID_LIST_INDEX = 0
+    iterate = 0
+    for row in table:
+        if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
+            updated_record = ui.get_inputs(['title: ', 'manufacturer: ', 'price: ', 'in stock: '], row)
+            table[iterate] = updated_record
+            data_manager.write_table_to_file('store/games.csv', table)
+            break
+        iterate += 1
     return table
 
 

@@ -86,8 +86,10 @@ def show_table(table):
     Returns:
         None
     """
-
+    
     # your code
+    titles_list = ['title', 'price','month', 'day', 'year']
+    ui.print_table(table, titles_list)
 
 
 def add(table):
@@ -124,11 +126,9 @@ def remove(table, id_):
 
     # your code
     ID_LIST_INDEX = 0
-    line_counter = 0
     for row in table:
         if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
             table.remove(row)
-        line_counter += 1
     data_manager.write_table_to_file('sales/sales.csv', table)
     return table
 
@@ -146,7 +146,15 @@ def update(table, id_):
     """
 
     # your code
-
+    ID_LIST_INDEX = 0
+    iterate = 0
+    for row in table:
+        if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
+            updated_record = ui.get_inputs(['title: ', 'price: ', 'month: ', 'day: ', 'year: '], row)
+            table[iterate] = updated_record
+            data_manager.write_table_to_file('sales/sales.csv', table)
+            break
+        iterate += 1
     return table
 
 
