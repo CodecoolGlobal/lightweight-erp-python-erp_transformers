@@ -55,12 +55,12 @@ def add_wrapper():
 
 def remove_wrapper():
     table = data_manager.get_table_from_file('store/games.csv')
-    remove(table, ui.get_inputs(['ID'], 'Enter ID: '))
+    remove(table, ui.get_inputs(['ID :'], 'Enter ID: '))
 
 
 def update_wrapper():
     table = data_manager.get_table_from_file('store/games.csv')
-    update(table, ui.get_inputs(['ID'], 'Enter ID: '))
+    update(table, ui.get_inputs(['ID :'], 'Enter ID: '))
 
 
 def get_counts_by_manufacturers_wrapper():
@@ -84,7 +84,8 @@ def show_table(table):
         None
     """
 
-    ui.print_table(table,'Store')
+    titles_list = ['title: ', 'manufacturer: ', 'price: ', 'in stock: ']
+    ui.print_table(table, titles_list)
 
 
 def add(table):
@@ -99,7 +100,11 @@ def add(table):
     """
 
     # your code
-
+    ID_INDEX = 0
+    record = ui.get_inputs(['title: ', 'manufacturer: ', 'price: ', 'in stock: '], "Please insert data: ")
+    record.insert(ID_INDEX, common.generate_random(table))
+    table.append(record)
+    data_manager.write_table_to_file('store/games.csv', table)
     return table
 
 
@@ -114,9 +119,11 @@ def remove(table, id_):
     Returns:
         list: Table without specified record.
     """
-
-    # your code
-
+    ID_LIST_INDEX = 0
+    for row in table:
+        if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
+            table.remove(row)
+    data_manager.write_table_to_file('store/games.csv', table)
     return table
 
 
@@ -133,7 +140,15 @@ def update(table, id_):
     """
 
     # your code
-
+    ID_LIST_INDEX = 0
+    iterate = 0
+    for row in table:
+        if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
+            updated_record = ui.get_inputs(['title: ', 'manufacturer: ', 'price: ', 'in stock: '], row)
+            table[iterate] = updated_record
+            data_manager.write_table_to_file('store/games.csv', table)
+            break
+        iterate += 1
     return table
 
 

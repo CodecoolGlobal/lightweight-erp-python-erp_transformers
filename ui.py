@@ -1,9 +1,6 @@
 """ User Interface (UI) module """
 import data_manager
 
-title_list = ['id', 'title', 'company','sold copies', 'something']
-table = data_manager.get_table_from_file('store/games.csv')
-
 def print_table(table, title_list):
     """
     Prints table with data.
@@ -69,10 +66,6 @@ def print_table(table, title_list):
     print(f"\{dash_char * maximum_row_length}/")
 
 
-
-
-print_table(table, title_list)
-
 def print_result(result, label):
     """
     Displays results of the special functions.
@@ -108,7 +101,7 @@ def print_menu(title, list_options, exit_message):
     Returns:
         None: This function doesn't return anything it only prints to console.
     """
-    print(f'{title}: ')
+    print(f'\n{title}: ')
     options_counter = 1
     for option in list_options:
         print(f'({options_counter}) {option}')
@@ -154,4 +147,4 @@ def print_error_message(message):
         None: This function doesn't return anything it only prints to console.
     """
 
-    print('There is no such option.')
+    print(f'{message}')
