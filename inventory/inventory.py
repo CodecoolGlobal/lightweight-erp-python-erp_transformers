@@ -100,7 +100,6 @@ def add(table):
     ID_INDEX = 0
     record = ui.get_inputs(['name: ', 'manufacturer: ', 'purchase_year: ', 'durability: '], "Please insert data: ")
     record.insert(ID_INDEX, common.generate_random(table))
-    print(record)
     table.append(record)
     data_manager.write_table_to_file('inventory/inventory.csv', table)
     return table
@@ -142,7 +141,8 @@ def update(table, id_):
     iterate = 0
     for row in table:
         if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
-            updated_record = ui.get_inputs(['id: ', 'name: ', 'manufacturer: ', 'purchase_year: ', 'durability: '], row)
+            updated_record = ui.get_inputs(['name: ', 'manufacturer: ', 'purchase_year: ', 'durability: '], row)
+            updated_record.insert(ID_LIST_INDEX, id_[ID_LIST_INDEX])
             table[iterate] = updated_record
             data_manager.write_table_to_file('inventory/inventory.csv', table)
             break

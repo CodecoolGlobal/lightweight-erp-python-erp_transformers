@@ -151,6 +151,7 @@ def update(table, id_):
     for row in table:
         if row[ID_LIST_INDEX] == id_[ID_LIST_INDEX]:
             updated_record = ui.get_inputs(['title: ', 'price: ', 'month: ', 'day: ', 'year: '], row)
+            updated_record.insert(ID_LIST_INDEX, id_[ID_LIST_INDEX])
             table[iterate] = updated_record
             data_manager.write_table_to_file('sales/sales.csv', table)
             break
@@ -160,6 +161,7 @@ def update(table, id_):
 
 # special functions:
 # ------------------
+
 
 def get_lowest_price_item_id(table):
     """
