@@ -168,6 +168,11 @@ def get_counts_by_manufacturers(table):
     """
 
     # your code
+    MANUFACTURER = 2
+    manufacturers = {}
+    for game in table:
+        manufacturers[game[MANUFACTURER]] = manufacturers.setdefault(game[MANUFACTURER], 0) + 1
+    ui.print_result(manufacturers, "Manufacturers | amount of games")
 
 
 def get_average_by_manufacturer(table, manufacturer):
@@ -182,3 +187,13 @@ def get_average_by_manufacturer(table, manufacturer):
          number
     """
     # your code
+    MANUFACTURER = 2
+    IN_STOCK = 4
+    all_games_in_stock = 0
+    number_of_games = 0
+    for game in table:
+        if game[MANUFACTURER] == manufacturer:
+            number_of_games += 1
+            all_games_in_stock += int(game[IN_STOCK])
+    average_games_amount = all_games_in_stock / number_of_games
+    ui.print_result(average_games_amount, "Average amount of games in stock:")
