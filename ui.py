@@ -96,6 +96,22 @@ def print_result(result, label):
     """
 
     # your code
+    if type(result)==dict:
+        lista = result.items()
+        print(f"{label}")
+        for i in lista:
+            print(f"{i[0]} {i[1]}")
+            # print(list(my_dict))
+    if type(result)==str:
+        print(f"{label}")
+        print(f"string")
+    if type(result)==list:
+        print(f"{label}")
+        for single_list in result:
+            print(str(single_list).strip("()"))
+    if type(result)==int:
+        print(f"{label}")
+        print(f"{result}")
 
 
 def print_menu(title, list_options, exit_message):
