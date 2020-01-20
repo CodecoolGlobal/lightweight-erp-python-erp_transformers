@@ -35,7 +35,7 @@ def generate_random(table):
         generated += special_char_id
         char_counter += 1
     if generated in special_id_list_in_file:
-        generate_random(table)
+        generate_random(table)  # refactor it (while loop)
     return generated
 
 
