@@ -64,7 +64,7 @@ def update_wrapper():
 
 def get_available_items_wrapper():
     table = data_manager.get_table_from_file('inventory/inventory.csv')
-    get_available_items_wrapper(table, ui.get_inputs(['Year :'], 'Enter year: '))
+    get_available_items(table, ui.get_inputs(['Year :'], 'Enter year: '))
 
 
 def get_average_durability_by_manufacturers_wrapper():
@@ -164,8 +164,14 @@ def get_available_items(table, year):
     Returns:
         list: list of lists (the inner list contains the whole row with their actual data types)
     """
+    available_item_list = []
+    YEAR_INDEX = 3
+    DURABILITY = 4
+    for row in table:
+        if int(row[YEAR_INDEX]) + int(row[DURABILITY]) < int(year[0]):
+            available_item_list.append(row)
+    return available_item_list
 
-    # your code
 
 
 def get_average_durability_by_manufacturers(table):
@@ -178,5 +184,13 @@ def get_average_durability_by_manufacturers(table):
     Returns:
         dict: a dictionary with this structure: { [manufacturer] : [avg] }
     """
-
-    # your code
+    MANUFACTURER = 2
+    DURABILITY = 4
+    avg_durability = {}
+    for row in table:
+        avg_durability[row[MANUFACTURER]] = avg_durability.setdefault(row[MANUFACTURER], [])
+        avg_durability[row[MANUFACTURER]].append(int(row[DURABILITY]))
+    for k, v in avg_durability.items():
+        result = sum(v)//len(v)
+        avg_durability[k] = result
+    return avg_durability
